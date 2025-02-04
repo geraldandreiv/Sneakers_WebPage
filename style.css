@@ -1,42 +1,59 @@
-nav {
-  padding: 20px;
-  display: block;
-  background-color: #a31d1d;
+h1 {
+  text-align: center;
+  font-family: "Roboto";
 }
-a {
-  text-decoration: none;
-  color: #e5d0ac;
-  font-family: "IBM Plex Sans";
-  padding: 10px;
-  font-weight: bold;
+.navbar input {
+  display: flex;
+  height: 50%;
+  position: absolute;
+  bottom: 12px;
+  right: 1%;
+}
+.navbar ul {
   position: relative;
-  max-width: max-content;
-  max-height: max-content;
+  background-color: black;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
 }
 
-a:hover {
-  opacity: 0.5;
+.navbar li {
+  list-style-type: none;
+  float: left;
 }
 
-a::after {
+.navbar a {
+  font-family: "Roboto";
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+  padding: 15px;
+  display: block;
+  text-align: center;
+  position: relative;
+  height: max-content;
+  width: max-content;
+}
+
+.navbar a::before {
   content: "";
-  background-color: #e5d0ac;
   width: 100%;
   height: 5%;
+  background-color: white;
   position: absolute;
   bottom: 0;
   left: 0;
+
   transition: 0.3s;
-  transition-timing-function: ease-in-out;
   transform: scaleX(0);
 }
-a:hover::after {
+
+.navbar a:hover::before {
   transform: scaleX(1);
 }
-
+.navbar a:hover {
+  background-color: gray;
+}
 body {
   margin: 0;
-  height: 100%;
-  width: 100%;
-  background-color: #fef9e1;
 }
